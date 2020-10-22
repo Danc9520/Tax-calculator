@@ -7,10 +7,11 @@ public class OverStatePensionAge extends HowMuchDoYouGetPaidPage {
     public OverStatePensionAge(WebDriver driver) {
         super(driver);
     }
-        public void overPension(String trueOrFalse) {
-                driver.findElement(By.id("[value]"+trueOrFalse));
+
+    public void overPension(String trueOrFalse) {
+        driver.findElement(By.id("[value]" + trueOrFalse));
 
 
-  }
     }
+}
 

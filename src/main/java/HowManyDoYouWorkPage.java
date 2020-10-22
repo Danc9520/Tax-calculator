@@ -12,7 +12,8 @@ public class HowManyDoYouWorkPage extends HowMuchDoYouGetPaidPage {
         driver.findElement(By.id("how-many-a-week")).sendKeys();
 
     }
-    public void enterHowMuchADay(int hours){
+
+    public void enterHowMuchADay(int hours) {
         driver.findElement(By.id("how-many-a-day")).sendKeys();
 
     }
