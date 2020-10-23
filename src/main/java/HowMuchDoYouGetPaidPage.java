@@ -1,5 +1,6 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class HowMuchDoYouGetPaidPage extends BasePage {
@@ -7,6 +8,7 @@ public class HowMuchDoYouGetPaidPage extends BasePage {
 
     public HowMuchDoYouGetPaidPage(WebDriver driver) {
         super(driver);
+
 
     }
 
@@ -22,7 +24,7 @@ public class HowMuchDoYouGetPaidPage extends BasePage {
             driver.findElement(By.cssSelector("#period-" + howOften)).click();
 
         }
-        driver.findElement(By.cssSelector("#button-continue")).click();
+
     }
 
 
