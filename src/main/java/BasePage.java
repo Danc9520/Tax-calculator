@@ -1,8 +1,4 @@
-
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
@@ -17,14 +13,15 @@ public class BasePage {
         this.wait = new WebDriverWait(driver, 20);
     }
 
-    public void nextPage()
-
-    {
-       WebElement element= driver.findElement(By.cssSelector("#button-continue"));
+    public void nextPage() {
+        WebElement element = driver.findElement(By.cssSelector("#button-continue"));
         element.click();
-
+        // workaround bug with safari driver, the following is NOT my code!
+        try {
+            ((JavascriptExecutor) driver).executeScript("let elem = arguments[arguments.length - 1]; elem.click()", element);
+        } catch (StaleElementReferenceException e) { return;
+        }
     }
-
 
 }
 
