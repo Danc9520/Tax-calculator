@@ -1,5 +1,4 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 
 
 public class OverStatePensionAge extends HowMuchDoYouGetPaidPage {
@@ -9,8 +8,7 @@ public class OverStatePensionAge extends HowMuchDoYouGetPaidPage {
     }
 
     public void overPension(String trueOrFalse) {
-        driver.findElement(By.cssSelector("[value="+trueOrFalse+"]")).click();
+        driver.findElement(By.cssSelector("[value=" + trueOrFalse + "]")).click();
 
     }
 }
-

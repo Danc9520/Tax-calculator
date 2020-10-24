@@ -12,8 +12,8 @@ public class HowMuchDoYouGetPaidPage extends BasePage {
 
     }
 
-    public void enterEarnings(int amount) {
-        driver.findElement(By.id("amount")).sendKeys(Integer.toString(amount));
+    public void enterEarnings(String amount) {
+        driver.findElement(By.id("amount")).sendKeys(amount);
     }
 
     public void enterPeriod(int howOften) {
